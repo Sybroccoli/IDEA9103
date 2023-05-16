@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Grid example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 0.6fr 1.8fr 1.8fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "title title"
+            "object object"
+            "object object";
+        }
+
+        .title { 
+            grid-area: title;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 45px; /* Replace with your desired font size */
+            font-weight: bold; /* Replace with your desired font weight */
+            color: #84d806; /* Replace with your desired font color */ 
+        }
+
+        .object { grid-area: object; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="title">Color-changing circle (please see below)</div>
+    <div class="object">
+      <svg id="svg-canvas" xmlns="http://www.w3.org/2000/svg"></svg>
+      <script type="text/javascript" src="script.js"></script>
+    </div>
+  </div>
+</body>
+</html>
